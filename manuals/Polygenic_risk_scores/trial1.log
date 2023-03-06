@@ -1,0 +1,55 @@
+PRSice 2.3.5 (2021-09-20) 
+https://github.com/choishingwan/PRSice
+(C) 2016-2020 Shing Wan (Sam) Choi and Paul F. O'Reilly
+GNU General Public License v3
+If you use PRSice in any published work, please cite:
+Choi SW, O'Reilly PF.
+PRSice-2: Polygenic Risk Score Software for Biobank-Scale Data.
+GigaScience 8, no. 7 (July 1, 2019)
+2023-03-06 15:22:05
+./PRSice_mac \
+    --a1 A1 \
+    --a2 A2 \
+    --bar-levels 0.001,0.05,0.1,0.2,0.3,0.4,0.5,1 \
+    --base ASN.gwas.txt \
+    --base-info INFO:0.9 \
+    --binary-target F \
+    --bp BP \
+    --chr CHR \
+    --clump-kb 250kb \
+    --clump-p 1.000000 \
+    --clump-r2 0.100000 \
+    --cov ASN.cov \
+    --interval 5e-05 \
+    --keep validate \
+    --lower 5e-08 \
+    --num-auto 22 \
+    --out trial1 \
+    --pheno ASN.pheno \
+    --pvalue P \
+    --seed 2412354158 \
+    --snp SNP \
+    --stat BETA \
+    --target ASN \
+    --thread 1 \
+    --upper 0.5
+
+Initializing Genotype file: ASN (bed) 
+
+Start processing ASN.gwas 
+================================================== 
+
+Base file: ASN.gwas.txt 
+Header of file is: 
+CHR	BP	SNP	A1	A2	N	SE	P	OR	INFO	MAF 
+
+529504 variant(s) observed in base file, with: 
+264745 variant(s) with INFO score less than 0.900000 
+14838 ambiguous variant(s) excluded 
+
+Error: A total of 2 duplicated SNP ID detected out of 
+       249919 input SNPs! Valid SNP ID (post --extract / 
+       --exclude, non-duplicated SNPs) stored at 
+       trial1.valid. You can avoid this error by using 
+       --extract trial1.valid 
+

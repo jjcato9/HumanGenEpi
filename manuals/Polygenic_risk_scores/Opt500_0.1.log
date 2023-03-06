@@ -1,0 +1,98 @@
+PRSice 2.3.5 (2021-09-20) 
+https://github.com/choishingwan/PRSice
+(C) 2016-2020 Shing Wan (Sam) Choi and Paul F. O'Reilly
+GNU General Public License v3
+If you use PRSice in any published work, please cite:
+Choi SW, O'Reilly PF.
+PRSice-2: Polygenic Risk Score Software for Biobank-Scale Data.
+GigaScience 8, no. 7 (July 1, 2019)
+2023-03-06 15:43:38
+./PRSice_mac \
+    --a1 A1 \
+    --a2 A2 \
+    --bar-levels 0.001,0.05,0.1,0.2,0.3,0.4,0.5,1 \
+    --base ASN.gwasqc.txt \
+    --base-info INFO:0.4 \
+    --binary-target F \
+    --bp BP \
+    --chr CHR \
+    --clump-kb 500kb \
+    --clump-p 1.000000 \
+    --clump-r2 0.100000 \
+    --cov ASN.cov \
+    --interval 5e-05 \
+    --keep validate \
+    --lower 5e-08 \
+    --num-auto 22 \
+    --out Opt500_0.1 \
+    --pheno ASN.pheno \
+    --pvalue P \
+    --seed 988067020 \
+    --snp SNP \
+    --stat BETA \
+    --target ASN \
+    --thread 1 \
+    --upper 0.5
+
+Initializing Genotype file: ASN (bed) 
+
+Start processing ASN.gwasqc 
+================================================== 
+
+Base file: ASN.gwasqc.txt 
+Header of file is: 
+CHR	BP	SNP	A1	A2	N	SE	P	OR	INFO	MAF 
+
+529502 variant(s) observed in base file, with: 
+1 variant(s) with INFO score less than 0.400000 
+29884 ambiguous variant(s) excluded 
+499617 total variant(s) included from base file 
+
+Loading Genotype info from target 
+================================================== 
+
+503 people (240 male(s), 263 female(s)) observed 
+252 founder(s) included 
+
+Warning: Currently not support haploid chromosome and sex 
+         chromosomes 
+
+29885 variant(s) not found in previous data 
+81 variant(s) with mismatch information 
+499536 variant(s) included 
+
+Phenotype file: ASN.pheno 
+Column Name of Sample ID: FID+IID 
+Note: If the phenotype file does not contain a header, the 
+column name will be displayed as the Sample ID which is 
+expected. 
+
+There are a total of 1 phenotype to process 
+
+Start performing clumping 
+
+Number of variant(s) after clumping : 180419 
+
+Processing the 1 th phenotype 
+
+Pheno is a continuous phenotype 
+12 sample(s) without phenotype 
+240 sample(s) with valid phenotype 
+
+Processing the covariate file: ASN.cov 
+============================== 
+
+Include Covariates: 
+Name	Missing	Number of levels 
+Sex	0	- 
+
+After reading the covariate file, 240 sample(s) included in 
+the analysis 
+
+There are 1 region(s) with p-value less than 1e-5. Please 
+note that these results are inflated due to the overfitting 
+inherent in finding the best-fit PRS (but it's still best 
+to find the best-fit PRS!). 
+You can use the --perm option (see manual) to calculate an 
+empirical P-value. 
+
